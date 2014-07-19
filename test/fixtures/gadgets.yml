@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  useful_for: MyString
+  analysis_group: MyString
+  gadget_description: MyString
+  cost: 1.5
+  company_name: MyString
+  company_website: MyString
+  currency_id: MyString
+
+two:
+  title: MyString
+  useful_for: MyString
+  analysis_group: MyString
+  gadget_description: MyString
+  cost: 1.5
+  company_name: MyString
+  company_website: MyString
+  currency_id: MyString
