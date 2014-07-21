@@ -4,43 +4,42 @@
       <div class="well">
        <legend>User Registration form</legend>
       <div class="col-md-offset-1">
-			       <%= form_for @user,:url =>user_registration_path,class: "form-horizontal" do |f|%>
-			        
-			        <div class="row">
-			            <div class="form-group">
-					              <label class="col-md-2 control-label">First name</label>  
-					               <div class="col-md-6">
-					              <%= f.text_field :fistname, required: true, class: 'form-control',place_holder: "Enter first name"%>
-					             </div>
-					            </div>
-			        </div><br/>
-			        
-			        <div class="row">
-			          <div class="form-group">
-					          <label class="col-md-2 control-label">Last name</label>  
-					            <div class="col-md-6">
-					              <%= f.text_field :lastname, required: true, class: 'form-control'%>
-					            </div>
-					      </div>
-			        </div><br/>
 
-			        <div class="row">
-			            <div class="form-group">
-					              <label class="col-md-2 control-label">Email</label>  
-					               <div class="col-md-6">
-					              <%= f.email_field :email, required: true, class: 'form-control'%>
-					             </div>
-					            </div>
-			        </div><br/>
-
-			        <div class="row">
-			          <div class="form-group">
-					          <label class="col-md-2 control-label">Password</label>  
-					            <div class="col-md-6">
-					              <%= f.password_field :password, required: true, class: 'form-control'%>
-					            </div>
-					      </div>
-			        </div><br/>
+       <%= form_for @user ,class: "form-horizontal" do |f|%>
+        
+        <div class="row">
+            <div class="form-group">
+		              <label class="col-md-2 control-label">First name</label>  
+		               <div class="col-md-6">
+		              <%= f.text_field :firstname, required: true, class: 'form-control',place_holder: "Enter first name"%>
+		             </div>
+		            </div>
+        </div><br/>
+        
+        <div class="row">
+            <div class="form-group">
+		              <label class="col-md-2 control-label">Last name</label>  
+		               <div class="col-md-6">
+		              <%= f.text_field :lastname, required: true, class: 'form-control'%>
+		             </div>
+		            </div>
+        </div><br/>
+        <div class="row">
+            <div class="form-group">
+		              <label class="col-md-2 control-label">Email</label>  
+		               <div class="col-md-6">
+		              <%= f.email_field :email, required: true, class: 'form-control'%>
+		             </div>
+		            </div>
+        </div><br/>
+        <div class="row">
+            <div class="form-group">
+		              <label class="col-md-2 control-label">Password</label>  
+		               <div class="col-md-6">
+		              <%= f.password_field :password, required: true, class: 'form-control'%>
+		             </div>
+		            </div>
+        </div><br/>
 
 			        <div class="row">
 			            <div class="form-group">

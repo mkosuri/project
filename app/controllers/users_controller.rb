@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
  before_action :set_user, only: [:show, :edit, :update, :destroy]
-before_action :authenticate_user!,:except =>:new
+ before_action :authenticate_user!,:except =>:new
   # GET /products
   # GET /products.json
   def index
@@ -70,6 +70,6 @@ before_action :authenticate_user!,:except =>:new
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email,:password,:password_confirmation,:fistname,:lastname,:role)
+      params.require(:user).permit(:email,:password,:password_confirmation,:firstname,:lastname,:role)
     end
 end
