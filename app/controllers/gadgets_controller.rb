@@ -1,12 +1,14 @@
 class GadgetsController < ApplicationController
 
    before_action :set_product, only: [:show, :edit, :update, :destroy]
-  #before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   # GET /products
   # GET /products.json
   def index
-    @gadgets = Gadget.all
+   @search = Gadget.search(params[:q])
+    # @gadgets = Gadget.all
+    @gadgets = @search.result
   end
 
   # GET /products/1

@@ -3,11 +3,37 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
  
- devise_for :users,:controllers => {:sessions => 'sessions',:registrations => 'users'}
  # resources :users,:only =>:index
- resources :users
+  #devise_for :users
+ devise_for :users,:path => "admin",:controllers => {:sessions => 'sessions',:registrations => 'users'} 
+
+  devise_scope :admin do
+    
+    get "admin/admins", :to => "users#index"
+  end
+
+
+#devise_for :admins,:path => "siri-admin", :controllers => {:sessions => 'sessions',:registrations => 'admins'}
+    #devise_scope :user do
+ #    get "admin/admins", :to => "users#index"
+   #end
+ resources :users,:path=>"admin"
+ resources :homes
+ resources :gadgets
+ #devise_for :admins, :controllers => {:sessions => 'sessions',:registrations => 'admins'}
+ # devise_scope :user do
+ #    get "admin/admins", :to => "users#index"
+ #  end
+ #resources :users
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+    root 'users#index'
+
+
+namespace :api do
+   namespace :v2 do
+     resources :gadgets
+  end
+end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -28,9 +54,8 @@ Rails.application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-  resources :homes
-  # root to: "homes#index"
-  resources :gadgets
+    # root to: "homes#index"
+  
     # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
