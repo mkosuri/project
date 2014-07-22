@@ -28,6 +28,13 @@ gem 'spring',        group: :development
 
 gem "ransack", github: "activerecord-hackery/ransack", branch: "rails-4.1"
 gem 'devise'
+gem 'json_expressions'
+gem 'rspec-rails',group: [:development, :test]
+gem 'factory_girl_rails',group: [:development, :test]
+gem "capybara",group: [:development, :test]
+
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
