@@ -47,3 +47,8 @@ gem "capybara",group: [:development, :test]
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# gem 'ng-rails-csrf'
+# gem 'bower-rails'
+# gem 'angular-rails-templates'
+
+gem 'angularjs-rails'

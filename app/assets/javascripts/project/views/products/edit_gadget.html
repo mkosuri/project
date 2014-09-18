@@ -1,0 +1,191 @@
+<div ng-controller="createCourseCtrl">
+    <script type="text/ng-template" id="/assets/project/views/products/edit_gadget.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Edit Gadget information</h3>
+        </div>
+        <div class="modal-body">
+            <div>
+        <form name="userForm" ng-submit="submit(items)" class="css-form" novalidate>
+          <div class="container">
+            <div class="col-md-10">
+              <div class="row">
+                <div class="col-md-9">
+                  <input type="text" 
+                           name="title" 
+                           class="form-control" 
+                           ng-model="items.title" placeholder="please right valid title"
+                           required>
+                      <p ng-show="userForm.title.$invalid && !userForm.title.$pristine">You title is required.</p>
+                </div>
+              </div>
+              <br/>
+              <div class="col-md-8">
+                <div class="row">
+                 <div class="form-group" ng-class=
+                        "{ 'has-error' : userForm.name.$invalid 
+                          && !userForm.name.$pristine }">
+                        <label class="col-md-3 control-label">Name of the method/gadget</label>
+                    <div class="col-md-9">
+                      <input type="text" 
+                           name="name" 
+                           class="form-control" 
+                           ng-model="items.name" 
+                           placeholder = "please enter valid gadget name" required >
+                      <p ng-show="userForm.name.$invalid && !userForm.name.$pristine">You name is required.</p>
+                    </div>
+                </div>
+              </div><br/>
+              <div class="row">
+                <div class="form-group" ng-class=
+                          "{ 'has-error' : userForm.usefull.$invalid 
+                          && !userForm.usefull.$pristine }">
+                  <label class="col-md-3 control-label">Email</label>
+                  <div class="col-md-9">
+                    <input type="email" 
+                         name="email" 
+                         class="form-control" 
+                         ng-model="items.email" placeholder="please enter valid email"
+                         required>
+                    <div ng-show="userForm.email.$dirty && userForm.email.$invalid">  Invalid:
+                      <span ng-show="userForm.email.$error.required">Tell us youre mail.</span>
+                      <span ng-show="userForm.email.$error.email">This is not a valid email.</span>
+                    </div>
+                  </div>
+                </div>
+              </div><br/>
+              <div class="row">
+                <div class="form-group" ng-class=
+                          "{ 'has-error' : userForm.usefull.$invalid 
+                          && !userForm.usefull.$pristine }">
+                  <label class="col-md-3 control-label">UsefulFor</label>
+                  <div class="col-md-9">
+                    <input type="text" 
+                         name="usefullfor" 
+                         class="form-control" 
+                         ng-model="items.useful_for" placeholder="please enter valid information"
+                         required>
+                    <p ng-show="userForm.usefullfor.$invalid && !userForm.usefullfor.$pristine">require field</p>
+                  </div>
+                </div>
+              </div><br/>
+              <div class="row">
+                <div class="form-group" ng-class=
+                          "{ 'has-error' : userForm.product.analysis_group.$invalid 
+                          && !userForm.product.analysis_group.$pristine }">
+                  <label class="col-md-3 control-label">AnalysisGroup</label>
+                  <div class="col-md-9">
+                    <input type="text" 
+                         name="analysis_group" 
+                         class="form-control" 
+                         ng-model="items.analysis_group" placeholder="please specify analasyis group" 
+                         required>
+                    <p ng-show="userForm.analysis_group.$invalid && !userForm.analysis_group.$pristine">analysis group is require field</p>
+                  </div>
+                </div>
+              </div><br/>
+              <div class="row">
+                <div class="form-group" ng-class=
+                          "{ 'has-error' : userForm.product.company_name.$invalid 
+                          && !userForm.product.company_name.$pristine }">
+                  <label class="col-md-3 control-label">CompanyName</label>
+                  <div class="col-md-9">
+                    <input type="text" 
+                         name="company_name" 
+                         class="form-control" 
+                         ng-model="items.company_name" placeholder="please enter company name"
+                         required>
+                    <p ng-show="userForm.company_name.$invalid && !userForm.company_name.$pristine">this give valid company </p>
+                  </div>
+                </div>
+              </div><br/>
+              <div class="row">
+                <div class="form-group" ng-class=
+                          "{ 'has-error' : userForm.product.company_website.$invalid 
+                          && !userForm.product.company_website.$pristine }">
+                  <label class="col-md-3 control-label">CompanyWebsite</label>
+                  <div class="col-md-9">
+                    <input type="text" 
+                         name="company_website" 
+                         class="form-control" 
+                         ng-model="items.company_website" placeholder="please specify company website"
+                         required>
+                    <p ng-show="userForm.company_website.$invalid && !userForm.company_website.$pristine">please fill company website</p>
+                  </div>
+                </div>
+              </div><br/>
+              <div class="row">
+                <div class="forgroup">
+                  <label class="col-md-3 control-label">Currency</label>
+                    <div class="col-md-6">
+                      <input type="text" 
+                         name="cost" 
+                         class="form-control" 
+                         ng-model="items.cost" placeholder="please enter your cost" require>
+                    </div>
+                    <div class="col-md-3">
+                        <select ng-model="items.currency" class="form-control">
+                              <option>Select</option>
+                              <option>Rupee</option>
+                              <option>Yan</option>
+                              <option>Dollar</option>
+                              <option>Dinar</option>
+                            </select>
+                    </div>
+                </div>
+                </div>
+                <br/>
+                <div class="row">
+                  <div class="formgroup" ng-init="items.toolaviable = '1'">
+                    <label class="col-md-3 control-label">UserforTools</label>
+                    <div class="col-md-6 col-md-offset-1"> 
+                       <label class="control-label">ToolsAviable</label>&nbsp;
+                      <input type="radio" ng-model="items.toolaviable" value="1" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       <label class="control-label">NoToolsAviable</label>&nbsp;
+                      <input type="radio" ng-model="items.toolaviable" value="0" /><br />
+                    </div>
+                  </div>
+                </div>
+                <br/>
+                <div class="row">
+                  <div class="form-group" ng-class=
+                            "{ 'has-error' : userForm.product.technology_used.$invalid 
+                            && !userForm.product.companywebsite.$pristine }">
+                    <label class="col-md-3 control-label">TechnologyUsed</label>
+                    <div class="col-md-9">
+                      <input type="text" 
+                           name="technology_used" 
+                           class="form-control" 
+                           ng-model="items.technology_used" placeholder="please enter used technology" 
+                           required>
+                      <p ng-show="userForm.technology_used.$invalid && !userForm.technology_used.$pristine">please give valid technology name</p>
+                    </div>
+                </div>
+              </div><br/>
+              <div class="row">
+                <div class="form-group" ng-class=
+                    "{ 'has-error' : userForm.product.scientific_description.$invalid 
+                        && !userForm.product.companywebsite.$pristine }">
+                    <label class="col-md-3 control-label">ScientificDescription</label>
+                  <div class="col-md-9">
+                    <input type="text" 
+                           name="scientific_description" 
+                           class="form-control" 
+                           ng-model="items.scientific_description" placeholder="please enter used technology"
+                           required>
+                      <p ng-show="userForm.scientific_description.$invalid && !userForm.scientific_description.$pristine">please mention scenticfic reason</p>
+                    </div>
+                </div>
+              </div><br/>
+            </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+        </form>
+        </div>
+        </div>
+    </div>
+    </script>
+</div>

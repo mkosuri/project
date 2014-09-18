@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140719102544) do
+ActiveRecord::Schema.define(version: 20140918051941) do
 
   create_table "gadgets", force: true do |t|
     t.string   "title"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20140719102544) do
     t.boolean  "tool_aviable"
     t.string   "technology_used"
     t.text     "scientific_description"
+    t.string   "email"
+    t.string   "name"
   end
 
   create_table "users", force: true do |t|

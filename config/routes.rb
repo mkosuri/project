@@ -5,12 +5,11 @@ Rails.application.routes.draw do
  
  # resources :users,:only =>:index
   #devise_for :users
- devise_for :users,:path => "admin",:controllers => {:sessions => 'sessions',:registrations => 'users'} 
-
-  devise_scope :admin do
+ devise_for :users,:path => "admin",:controllers => {:sessions => 'sessions',:registrations => 'users'}
+  # devise_scope :admin do
     
-    get "admin/admins", :to => "users#index"
-  end
+  #   #get "admin/admins", :to => "users#index"
+  # end
 
 
 #devise_for :admins,:path => "siri-admin", :controllers => {:sessions => 'sessions',:registrations => 'admins'}
@@ -20,13 +19,17 @@ Rails.application.routes.draw do
  resources :users,:path=>"admin"
  resources :homes
  resources :gadgets
+ resources :homeone
+
+ root 'homeone#index'
+ # get '*path', to: 'homeone#index'
  #devise_for :admins, :controllers => {:sessions => 'sessions',:registrations => 'admins'}
  # devise_scope :user do
  #    get "admin/admins", :to => "users#index"
  #  end
  #resources :users
   # You can have the root of your site routed with "root"
-    root 'users#index'
+    #root 'users#index'
 
 
 namespace :api do
