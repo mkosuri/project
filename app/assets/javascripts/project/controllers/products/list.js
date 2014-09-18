@@ -1,3 +1,4 @@
+'use strict';
 app.controller('products', ['$scope','$http','$stateParams','$state','$modal','gadgets', function($scope,$http,$stateParams,$state,$modal,$gadgets_services) {  
 $scope.list_headers = ['id','name','companyname','actions']
 
@@ -26,11 +27,10 @@ $scope.list_headers = ['id','name','companyname','actions']
     };
 
 // this is edit gadget information with popup modal
-  $scope.open = function(size,gadgetid){
+  $scope.open = function(gadgetid){
     var modalInstance = $modal.open({
       templateUrl: '/assets/project/views/products/edit_gadget.html',
       controller: 'createCourseCtrl',
-      size: size,
       resolve: {
         items: function () {
         return $gadgets_services.modal.get(gadgetid)

@@ -21,7 +21,6 @@
 //= require ./project/controllers/products/show
 //= require ./project/controllers/products/newproduct
 //= require ./project/controllers/products/delete
-//= require ./project/controllers/products/new_one
 //= require ./project/controllers/products/accordins
 //= require ./project/services/gadgets
 //= require ./project/services/products

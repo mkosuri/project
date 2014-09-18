@@ -11,8 +11,8 @@
       <td>{{product.company_name}}</td>
       <td>
           <a ng-href="/#/products/show/{{product.id}}">show</a>
-          <button type= "button" ng-init="show=false" ng-click="show = !show">flip</button>
-          <button ng-show="show" ng-click="open('lg',(product.id))">edit</button>
+          <!-- <button type= "button" ng-init="show=false" ng-click="show = !show">flip</button> -->
+          <button ng-click="open(product.id)">edit</button>
           <button type= "button" ng-click="deleteItem(product.id)">delete</button>
       </td>
     </tr>
