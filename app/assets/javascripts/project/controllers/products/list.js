@@ -25,8 +25,7 @@ $scope.list_headers = ['id','name','companyname','actions']
     });
     };
 
-
-// this is edit gadget information
+// this is edit gadget information with popup modal
   $scope.open = function(size,gadgetid){
     var modalInstance = $modal.open({
       templateUrl: '/assets/project/views/products/edit_gadget.html',
@@ -38,12 +37,6 @@ $scope.list_headers = ['id','name','companyname','actions']
         }
       }
     });
-    // modal instace
-    // modalInstance.result.then(function () {
-    //   console.log("this is modal instace");
-    // },function () {
-    //   console.log("kkkkkkkkkkkkk")
-    // );
   };
 
   $scope.deleteItem();

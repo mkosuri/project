@@ -1,5 +1,3 @@
-console.log("this is for describing products")
-
 var myApp = angular.module('myApp.providers', []);
 myApp.value('clientId', 'a12345654321x');
 
@@ -9,4 +7,4 @@ app.factory("clientId", function () {
   };
 });
 
-
+// to provide the constvalue with provides

@@ -13,16 +13,10 @@ myapp.directive('totalproducts', function() {
     };
 });
 
-
-
-
-
-
 // doubt traschdule
 // doubt controller inside 
 
  // scope.fullname = attributes.first + '' + attributes.last
-
 
  // attributes.$observe('totalproducts', function(values){
       //       scope.totalproducts = values

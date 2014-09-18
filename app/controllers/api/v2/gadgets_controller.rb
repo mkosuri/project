@@ -4,8 +4,8 @@ class Api::V2::GadgetsController < Api::ApiController
     @gadgets = Gadget.search(company_name_start:params[:gadgets]).result
     render json: Project::Writer::GadgetWriter.new.write_all(@gadgets)
 	end
- 
-	def show
+
+  def show
     @gadget = Gadget.find(params[:id])
     render json: Project::Writer::GadgetWriter.new.write_show(@gadget)
 	end
@@ -52,11 +52,13 @@ class Api::V2::GadgetsController < Api::ApiController
      	render :json => "bad responce"
      end
   end
-  
+
   def destroy
   @gadget = Gadget.destroy(params[:id])
    render status: 200, json: '1'
    # rescue ActiveRecord::RecordInvalid => exception
    # render status: 403, json: exception.record.errors
   end
+
 end
+

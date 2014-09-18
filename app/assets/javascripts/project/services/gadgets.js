@@ -18,8 +18,7 @@ myApp.factory('gadgets',['$http',function($http) {
         console.log("this is success response")
       }).error(function(response) {
       console.log("fail the error")
-    });
-           
+    });     
   }
 
   var edit_gadget_info = function(gadgetid){
@@ -70,5 +69,4 @@ myApp.factory('gadgets',['$http',function($http) {
       remove: remove_gadget
     }
   };
-
 }]);
