@@ -1,6 +1,7 @@
 console.log("this is app js file")
 var app = angular
-    .module('myApp', ['myApp.providers','myApp.services','myapp.directives','ui.router', 'ui.router.state','ui.bootstrap']).config(['$stateProvider', function ($stateProvider) {
+    .module('myApp', ['myApp.providers','myApp.services','myapp.directives','ui.router', 'ui.router.state','ui.bootstrap']).config(['$stateProvider','$urlRouterProvider', function ($stateProvider,$urlRouterProvider) {
+        $urlRouterProvider.otherwise('/products');
         $stateProvider
           .state('products', {
             url: "/products",

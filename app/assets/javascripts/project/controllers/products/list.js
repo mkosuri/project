@@ -31,6 +31,7 @@ $scope.list_headers = ['id','name','companyname','actions']
     var modalInstance = $modal.open({
       templateUrl: '/assets/project/views/products/edit_gadget.html',
       controller: 'createCourseCtrl',
+      backdrop: 'true',
       resolve: {
         items: function () {
         return $gadgets_services.modal.get(gadgetid)
